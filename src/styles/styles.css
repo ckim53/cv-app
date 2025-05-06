@@ -1,0 +1,11 @@
+
+* {
+    font-size: 1em;
+    text-align: center;      
+    font-weight: bold;    
+    color: inherit;       
+    font-family: inherit;  
+    border: none;         
+    background: transparent;
+    outline: none;
+}

@@ -2,8 +2,8 @@ import {useState} from 'react'
 
 function General() {
     const [name, setName] = useState('John Doe');
-    const [email, setEmail] = useState('cool@nice.com');
-    const [phone, setPhone] = useState('562-555-5555');
+    const [email, setEmail] = useState('user@email.com');
+    const [phone, setPhone] = useState('777-777-7777');
     const [status, setStatus] = useState(null);
 
     function handleEdit() {
@@ -32,21 +32,23 @@ function General() {
 
     if (status == 'edit') {
         return (
-            <>
-                <button onClick={handleSubmit}>Submit</button>
-                <h2><input id="name" type="text" value={name} onChange={handleChange} autoFocus/></h2>
+            <div className='header'>
+                <div className="header-title">
+                    <h1><input id="name" value={name} onChange={handleChange} autoFocus/></h1><button onClick={handleSubmit}>Submit</button>
+                </div>
                 <h2><input id="email" type="text" value={email} onChange={handleChange}/></h2>
                 <h2><input id="phone" type="text" value={phone} onChange={handleChange}/></h2>
-            </>
+            </div>
         );
     } 
     return (
-        <> 
-            <button onClick={handleEdit}>Edit</button>
-            <h2>{name}</h2>
-            <h2>{email}</h2>
-            <h2>{phone}</h2>
-        </>    
+        <div className="header"> 
+            <div className="header-title">
+                <h1>{name}</h1><button onClick={handleEdit}>Edit</button>
+            </div>
+            <h3>{email}</h3>
+            <h3>{phone}</h3>
+        </div>    
     );
 }
 

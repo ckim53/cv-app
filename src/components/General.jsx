@@ -2,8 +2,8 @@ import {useState} from 'react'
 
 function General() {
     const [name, setName] = useState('John Doe');
-    const [email, setEmail] = useState('user@email.com');
-    const [phone, setPhone] = useState('777-777-7777');
+    const [email, setEmail] = useState('cool@nice.com');
+    const [phone, setPhone] = useState('562-555-5555');
     const [status, setStatus] = useState(null);
 
     function handleEdit() {
@@ -36,8 +36,8 @@ function General() {
                 <div className="header-title">
                     <h1><input id="name" value={name} onChange={handleChange} autoFocus/></h1><button onClick={handleSubmit}>Submit</button>
                 </div>
-                <h2><input id="email" type="text" value={email} onChange={handleChange}/></h2>
-                <h2><input id="phone" type="text" value={phone} onChange={handleChange}/></h2>
+                <h3><input id="email" type="text" value={email} onChange={handleChange}/></h3>
+                <h3><input id="phone" type="text" value={phone} onChange={handleChange}/></h3>
             </div>
         );
     } 
